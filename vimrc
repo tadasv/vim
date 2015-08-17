@@ -19,6 +19,7 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'fatih/vim-go'
 Plugin 'elzr/vim-json'
+Plugin 'ekalinin/Dockerfile.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -32,7 +33,7 @@ set splitright splitbelow
 set hidden
 set hlsearch
 set nofoldenable
-set spell
+set nospell
 set autoindent
 set smartindent
 set history=1000
