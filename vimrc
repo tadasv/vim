@@ -8,6 +8,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'flazz/vim-colorschemes'
 Plugin 'wincent/command-t'
 Plugin 'groenewege/vim-less'
 Plugin 'pangloss/vim-javascript'
@@ -26,6 +27,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 
+colorscheme wombat256i
 " Configure the rest
 syntax on
 set equalalways
