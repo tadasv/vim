@@ -59,6 +59,7 @@ autocmd FileType htmldjango setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType less setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType sh setlocal noexpandtab
 
 au FileType go nmap <leader>r <Plug>(go-run)
 au FileType go nmap <leader>b <Plug>(go-build)
