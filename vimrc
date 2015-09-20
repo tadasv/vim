@@ -26,6 +26,8 @@ Plugin 'ekalinin/Dockerfile.vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+let g:vim_json_syntax_conceal = 0
+
 
 colorscheme wombat256i
 " Configure the rest
