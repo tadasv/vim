@@ -21,6 +21,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'fatih/vim-go'
 Plugin 'elzr/vim-json'
 Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'belltoy/vim-protobuf'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -80,4 +81,5 @@ augroup Python
     highlight OverLength ctermbg=red ctermfg=white guibg=#592929
     au Filetype python match OverLength /\%81v.\+/
         let python_highlight_all = 1
+        autocmd FileType python nnoremap <leader>y :0,$!yapf<Cr>
 augroup END
