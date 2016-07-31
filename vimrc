@@ -22,6 +22,8 @@ Plugin 'fatih/vim-go'
 Plugin 'elzr/vim-json'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'belltoy/vim-protobuf'
+Plugin 'hashivim/vim-terraform'
+Plugin 'jhradilek/vim-docbk'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
