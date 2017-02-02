@@ -23,7 +23,7 @@ Plugin 'elzr/vim-json'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'belltoy/vim-protobuf'
 Plugin 'hashivim/vim-terraform'
-Plugin 'jhradilek/vim-docbk'
+Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -51,6 +51,10 @@ set directory=~/.vim/swap,~/tmp,/var/tmp/,tmp
 let mapleader=","
 "" Clear current search
 nmap <silent> <leader>/ :nohlsearch<CR>
+nmap gd :YcmCompleter GoToDefinition<CR>
+nmap gr :YcmCompleter GoToReferences<CR>
+nmap doc :YcmCompleter GetDoc<CR>
+
 
 " tabs and spaces handling
 set expandtab
