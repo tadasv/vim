@@ -24,12 +24,24 @@ Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'belltoy/vim-protobuf'
 Plugin 'hashivim/vim-terraform'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'tpope/vim-dispatch'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 let g:vim_json_syntax_conceal = 0
+
+" run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#cmd#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+
 
 
 colorscheme wombat256i
@@ -47,6 +59,7 @@ set history=1000
 set backspace=indent,eol,start
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.o,*.a
 set directory=~/.vim/swap,~/tmp,/var/tmp/,tmp
+set autowrite
 
 let mapleader=","
 "" Clear current search
@@ -71,9 +84,9 @@ autocmd FileType less setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType sh setlocal noexpandtab
 
 au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
-" au FileType go nmap <leader>t <Plug>(go-test)
-" au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+au FileType go nmap <leader>c <Plug>(go-coverage-browser)
 
 augroup Python
         au!
