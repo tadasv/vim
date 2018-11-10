@@ -27,6 +27,10 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tomlion/vim-solidity'
 Plugin 'freitass/todo.txt-vim'
+Plugin 'JamshedVesuna/vim-markdown-preview'
+
+" use grip for markdown
+let vim_markdown_preview_github=1
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
