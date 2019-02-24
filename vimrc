@@ -28,6 +28,7 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'tomlion/vim-solidity'
 Plugin 'freitass/todo.txt-vim'
 Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'leafgarland/typescript-vim'
 
 " use grip for markdown
 let vim_markdown_preview_github=1
